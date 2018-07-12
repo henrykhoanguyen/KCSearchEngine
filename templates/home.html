@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="text-center" style="padding-top: 20%">
+    <h1 class="display-4"><b style="color: dodgerblue">Khoality</b><b style="color:crimson"> Control</b><b style="color: gold"> Search</b><b style="color: green"> Engine</b><b style="color: dodgerblue">!</b></h1><br>
+    <!--<img src="static/j.png" class="img-fluid" alt="Responsive image" style="max-width: 50%;">-->
+
+    <form method="POST" action="" class="form-inline" style="display: inline" >
+        <input type="text" class="form-control" name="query" value="{{request.form.query}}" style="width:60%">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+</div>
+
+{% endblock %}

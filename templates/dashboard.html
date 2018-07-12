@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<nav class="navbar navbar-expand-lg ">
+    <h1 class="display-5" style="padding-right: 2%"><a href="/"><b style="color: dodgerblue">K</b><b style="color:crimson">C</b><b style="color: gold">S</b><b style="color: green">E</b><b style="color: dodgerblue">!</b></a>
+    </h1>
+
+    <form method="POST" class="form-inline" action="">
+        <input class="form-control mr-sm-2" name="query" value="{{request.form.query}}" type="text">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+</nav>
+
+<table class="table table-striped">
+    <tr><th>
+        {% for url in urls %}
+            <a href="{{url}}">{{url}}</a><br><br>
+        {% endfor %}
+    </th></tr>
+</table>
+
+{% endblock %}
